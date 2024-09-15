@@ -1,0 +1,40 @@
+{
+  "employees": [
+    {
+      "id": "EMP02",
+      "firstName": "Alvin",
+      "lastName": "Alexander",
+      "gender": "male",
+      "jobTitle": "Jr. Developer",
+      "address": "New Delhi, India",
+      "contact": "9999999999",
+      "email": "heyitsalvinalex@gmail.com",
+      "experience": 5,
+      "package": 34
+    },
+    {
+      "id": "EMP03",
+      "firstName": "Kuldeep",
+      "lastName": "Tak",
+      "gender": "male",
+      "jobTitle": "Manager",
+      "address": "Mumbai, India",
+      "contact": "9999999999",
+      "email": "kdtak13@gmail.com",
+      "experience": 5,
+      "package": 34
+    },
+    {
+      "id": "cb86",
+      "firstName": "",
+      "lastName": "",
+      "gender": "",
+      "jobTitle": "",
+      "address": "",
+      "contact": "",
+      "email": "",
+      "experience": "",
+      "package": ""
+    }
+  ]
+}
