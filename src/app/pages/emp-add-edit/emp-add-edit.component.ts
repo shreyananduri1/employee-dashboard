@@ -14,12 +14,18 @@ export class EmpAddEditComponent implements OnInit{
     lastName: new FormControl(''),
     gender: new FormControl(''),
     jobTitle: new FormControl(''),
-    address: new FormControl(''),
+    city: new FormControl(''),
     contact: new FormControl(''),
     email: new FormControl(''),
     experience: new FormControl(''),
     package: new FormControl('')
   })
+
+  jobs: string[] = [
+    'Jr. Developer',
+    'Sr. Developer',
+    'Manager'
+  ]
 
   constructor(private empService: EmployeesService, private formBuilder:FormBuilder, private dialogRef: MatDialogRef<EmpAddEditComponent>, @Inject(MAT_DIALOG_DATA) public data:any) {}
 

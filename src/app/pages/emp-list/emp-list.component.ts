@@ -19,7 +19,7 @@ export class EmpListComponent {
     'lastName',
     'gender',
     'jobTitle',
-    'address',
+    'city',
     'contact',
     'email',
     'experience',
