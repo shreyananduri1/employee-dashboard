@@ -22,7 +22,7 @@ export class EmployeesService {
   }
 
   updateEmp(id: any, employee: any): Observable<any> {
-    return this.http.put<any>('${this.url}/${id}', employee)
+    return this.http.put<any>(`${this.url}/${id}`, employee)
   }
 
   addEmp(payload: any) {

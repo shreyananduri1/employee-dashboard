@@ -23,7 +23,7 @@
             />
           </mat-form-field>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <mat-form-field appearance="outline">
             <mat-radio-group
               aria-label="Select an option"
@@ -35,13 +35,63 @@
               <mat-radio-button value="others">Others</mat-radio-button>
             </mat-radio-group>
           </mat-form-field>
-        </div>
+        </div> -->
         <div class="row">
-          <mat-form-field appearance="outline" formControlName="jobTitle">
+          <mat-form-field appearance="outline">
             <mat-label>Job Title</mat-label>
-            <mat-select>
+            <mat-select formControlName="jobTitle">
               <mat-option *ngFor="let val of jobs" [value]="val">{{val}}</mat-option>
             </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>City</mat-label>
+            <input
+              matInput
+              type="text"
+              placeholder="city"
+              formControlName="city"
+            />
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>Contact</mat-label>
+            <input
+              matInput
+              type="string"
+              placeholder="contact"
+              formControlName="contact"
+            />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              type="string"
+              placeholder="email"
+              formControlName="email"
+            />
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field appearance="outline">
+            <mat-label>Experience</mat-label>
+            <input
+              matInput
+              type="number"
+              placeholder="experience"
+              formControlName="experience"
+            />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Package</mat-label>
+            <input
+              matInput
+              type="number"
+              placeholder="package"
+              formControlName="package"
+            />
+            <mat-hint>In rupees</mat-hint>
           </mat-form-field>
         </div>
       </div>

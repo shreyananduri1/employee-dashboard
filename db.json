@@ -1,7 +1,6 @@
 {
   "employees": [
     {
-      "id": "EMP02",
       "firstName": "Alvin",
       "lastName": "Alexander",
       "gender": "male",
@@ -10,7 +9,8 @@
       "contact": "9999999999",
       "email": "heyitsalvinalex@gmail.com",
       "experience": 5,
-      "package": 34
+      "package": 34,
+      "id": "EMP02"
     },
     {
       "id": "EMP03",
@@ -25,52 +25,16 @@
       "package": 34
     },
     {
-      "id": "31b2",
-      "firstName": "",
-      "lastName": "",
+      "id": "329b",
+      "firstName": "Suraj",
+      "lastName": "Sharma",
       "gender": "",
-      "jobTitle": "",
-      "city": "",
-      "contact": "",
-      "email": "",
-      "experience": "",
-      "package": ""
-    },
-    {
-      "id": "f64b",
-      "firstName": "",
-      "lastName": "",
-      "gender": "",
-      "jobTitle": "",
-      "city": "",
-      "contact": "",
-      "email": "",
-      "experience": "",
-      "package": ""
-    },
-    {
-      "id": "d179",
-      "firstName": "",
-      "lastName": "",
-      "gender": "",
-      "jobTitle": "",
-      "city": "",
-      "contact": "",
-      "email": "",
-      "experience": "",
-      "package": ""
-    },
-    {
-      "id": "d1ce",
-      "firstName": "",
-      "lastName": "",
-      "gender": "",
-      "jobTitle": "",
-      "city": "",
-      "contact": "",
-      "email": "",
-      "experience": "",
-      "package": ""
+      "jobTitle": "Jr. Developer",
+      "city": "Bangalore",
+      "contact": "7665324657",
+      "email": "xyz@gmail.com",
+      "experience": 3,
+      "package": 7
     }
   ]
 }
