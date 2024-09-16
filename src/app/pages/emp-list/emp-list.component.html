@@ -19,7 +19,7 @@
     />
   </mat-form-field>
 
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
     <!-- Position Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>Id</th>
@@ -28,12 +28,12 @@
 
     <!-- Name Column -->
     <ng-container matColumnDef="firstName">
-      <th mat-header-cell *matHeaderCellDef>First Name</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>First Name</th>
       <td mat-cell *matCellDef="let row">{{ row.firstName }}</td>
     </ng-container>
 
     <ng-container matColumnDef="lastName">
-      <th mat-header-cell *matHeaderCellDef>Last Name</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Last Name</th>
       <td mat-cell *matCellDef="let row">{{ row.lastName }}</td>
     </ng-container>
 
@@ -65,12 +65,12 @@
     </ng-container>
 
     <ng-container matColumnDef="experience">
-      <th mat-header-cell *matHeaderCellDef>Experience</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Experience</th>
       <td mat-cell *matCellDef="let row">{{ row.experience }}</td>
     </ng-container>
 
     <ng-container matColumnDef="package">
-      <th mat-header-cell *matHeaderCellDef>Package</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Package</th>
       <td mat-cell *matCellDef="let row">{{ row.package }}</td>
     </ng-container>
 
@@ -96,4 +96,6 @@
       </td>
     </tr>
   </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of Employees"></mat-paginator>
 </div>

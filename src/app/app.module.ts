@@ -19,6 +19,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import {MatSort, Sort, MatSortModule} from '@angular/material/sort';
+import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {MatSort, Sort, MatSortModule} from '@angular/material/sort';
     MatRadioModule,
     MatOptionModule,
     MatSelectModule,
-    MatSortModule
+    MatSortModule,
+    MatPaginatorModule
   ],
   providers: [
     provideAnimationsAsync()

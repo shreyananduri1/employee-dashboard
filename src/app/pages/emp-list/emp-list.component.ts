@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { EmployeesService } from '../../services/employees.service';
 import { MatDialog } from '@angular/material/dialog';
 import { EmpAddEditComponent } from '../emp-add-edit/emp-add-edit.component';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-emp-list',
@@ -29,6 +30,7 @@ export class EmpListComponent {
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatSort) sort!: MatSort;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(private empService: EmployeesService, private dialog: MatDialog) {}
 
@@ -40,6 +42,8 @@ export class EmpListComponent {
     this.empService.getEmp().subscribe((response) => {
       this.employees = response;
       this.dataSource = new MatTableDataSource(response);
+      this.dataSource.sort = this.sort;
+      this.dataSource.paginator = this.paginator;
     });
   }
 
