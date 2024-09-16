@@ -1,5 +1,5 @@
 <div mat-dialog-title>
-  <h1>User Form</h1>
+  <h1>Employee Details Form</h1>
   <div>
     <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
       <div mat-dialog-content>
@@ -23,8 +23,8 @@
             />
           </mat-form-field>
         </div>
-        <!-- <div class="row">
-          <mat-form-field appearance="outline">
+        <div class="row">
+          <!-- <mat-form-field appearance="outline"> -->
             <mat-radio-group
               aria-label="Select an option"
               formControlName="gender"
@@ -34,8 +34,8 @@
               <mat-radio-button value="female">Female</mat-radio-button>
               <mat-radio-button value="others">Others</mat-radio-button>
             </mat-radio-group>
-          </mat-form-field>
-        </div> -->
+          <!-- </mat-form-field> -->
+        </div>
         <div class="row">
           <mat-form-field appearance="outline">
             <mat-label>Job Title</mat-label>
@@ -96,8 +96,8 @@
         </div>
       </div>
       <div mat-dialog-actions>
-        <button mat-raised-button>Cancel</button>
-        <button mat-raised-button color="primary">
+        <button mat-raised-button (click)="onCancel()">Cancel</button>
+        <button mat-raised-button color="primary" data-ng-disabled="empForm.$invalid">
           {{ data ? "Update" : "Save" }}
         </button>
       </div>

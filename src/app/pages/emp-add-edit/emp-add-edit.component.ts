@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { EmployeesService } from '../../services/employees.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
@@ -10,13 +10,13 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 })
 export class EmpAddEditComponent implements OnInit{
   empForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
+    firstName: new FormControl('', Validators.required),
+    lastName: new FormControl('', Validators.required),
     gender: new FormControl(''),
     jobTitle: new FormControl(''),
     city: new FormControl(''),
-    contact: new FormControl(''),
-    email: new FormControl(''),
+    contact: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern("^[0-9]*$")]),
+    email: new FormControl('', [Validators.required, Validators.email]),
     experience: new FormControl(''),
     package: new FormControl('')
   })
@@ -34,6 +34,9 @@ export class EmpAddEditComponent implements OnInit{
   }
 
   onFormSubmit(){
+    if (this.empForm.invalid) {
+      return;
+      }
     if(this.data){
       this.empService.updateEmp(this.data.id, this.empForm.value).subscribe(() => {
       this.dialogRef.close(true)
@@ -44,5 +47,9 @@ export class EmpAddEditComponent implements OnInit{
         this.dialogRef.close(true)
       })
     }
+  }
+
+  onCancel() {
+    this.dialogRef.close(true)
   }
 }

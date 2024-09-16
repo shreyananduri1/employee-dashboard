@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IEmployee } from '../../models/employees.model';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -27,6 +27,8 @@ export class EmpListComponent {
     'action',
   ];
   dataSource!: MatTableDataSource<any>;
+
+  @ViewChild(MatSort) sort!: MatSort;
 
   constructor(private empService: EmployeesService, private dialog: MatDialog) {}
 
