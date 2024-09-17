@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IEmployee } from '../models/employees.model';
+import constants from '../constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeesService {
 
-  private url="http://localhost:3000/employees"
+  private url=constants.URL;
   constructor(private http:HttpClient) { 
     
   }
