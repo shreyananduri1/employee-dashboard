@@ -1,18 +1,6 @@
 {
   "employees": [
     {
-      "firstName": "Alvin",
-      "lastName": "Alexander",
-      "gender": "male",
-      "jobTitle": "Jr. Developer",
-      "city": "New Delhi, India",
-      "contact": "9999999999",
-      "email": "heyitsalvinalex@gmail.com",
-      "experience": 5,
-      "package": 34,
-      "id": "EMP02"
-    },
-    {
       "id": "EMP03",
       "firstName": "Kuldeep",
       "lastName": "Tak",
@@ -49,16 +37,28 @@
       "id": "ed75"
     },
     {
-      "firstName": "Megha",
-      "lastName": "L",
+      "firstName": "Prerna",
+      "lastName": "U",
       "gender": "female",
+      "jobTitle": "Jr. Developer",
+      "city": "Bangalore",
+      "contact": "7627536537",
+      "email": "prerna@gmail.com",
+      "experience": 1,
+      "package": 6,
+      "id": "5600"
+    },
+    {
+      "id": "0e0e",
+      "firstName": "temp",
+      "lastName": "k",
+      "gender": "male",
       "jobTitle": "Sr. Developer",
-      "city": "Mumbai",
-      "contact": "6527635746",
-      "email": "x@gmail.com",
+      "city": "Bangalore",
+      "contact": "7648375628",
+      "email": "ex@gmail.com",
       "experience": 4,
-      "package": 17,
-      "id": "6cb2"
+      "package": 34
     }
   ]
 }
