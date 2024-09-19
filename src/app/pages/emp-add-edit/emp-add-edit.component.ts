@@ -38,7 +38,7 @@ export class EmpAddEditComponent implements OnInit{
       return;
       }
     if(this.data){
-      this.empService.updateEmp(this.data.id, this.empForm.value).subscribe(() => {
+      this.empService.updateEmp(this.data._id, this.empForm.value).subscribe(() => {
       this.dialogRef.close(true)
     })
     }
